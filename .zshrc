@@ -42,6 +42,6 @@ turbo () {
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh;
 
 # After-hook
-if [ -f ~/.zshrc_local_after ]; then
-  source ~/.zshrc_local_after;
-fi;
+eval "$(fnm env --use-on-cd)"
+eval "$(direnv hook zsh)"
+alias vox="~/git/voxsupFrontend2/.vox"
